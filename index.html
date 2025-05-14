@@ -37,41 +37,76 @@
                         <path d="m21 21-4.3-4.3"></path>
                     </g>
                 </svg>
-                <input id="" class="focus:outline-none" type="search" required placeholder="Search your phone" />
+                <input id="search-field" class="focus:outline-none" type="search" required
+                    placeholder="Search your phone" />
             </label>
 
-            <button class="btn bg-[#0D6EFD] text-white rounded-lg">Sign Up</button>
+            <button onclick="handleSearch()" class="btn bg-[#0D6EFD] text-white rounded-lg">Search</button>
         </section>
     </header>
 
+
+
     <main class="container mx-auto mt-12 mb-32">
-        <div class="flex gap-6">
-            <div class="p-6 space-y-6 text-center border border-[#CFCFCF] rounded-lg">
-                <img src="" alt="">
-                <h3>Iphone 13 Pro Max</h3>
-                <p>There are many variations of passages of available, but the majority have suffered</p>
-                <h3>$999</h3>
-                <button class="btn bg-[#0D6EFD] text-white font-semibold text-xl rounded-lg">Show Details</button>
+        <section>
+            <!-- spinner or loading -->
+            <div id="loading-spinner" class="text-center my-4 hidden">
+                <span class="loading loading-spinner text-info"></span>
             </div>
-           
-        </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 ">
+                <!-- <div class="p-6 space-y-6 text-center border border-[#CFCFCF] rounded-lg mx-auto">
+                <img src="./apple-iphone-13-mini.jpg" alt="" class="mx-auto">
+                <h3 class="font-bold text-2xl">Iphone 13 Pro Max</h3>
+                <p class="text-lg max-w-60">There are many variations of passages of available, but the majority have suffered</p>
+                <h3 class="font-bold text-2xl">$999</h3>
+                <button class="btn bg-[#0D6EFD] text-white font-semibold text-xl rounded-lg">Show Details</button>
+            </div> -->
+
+            </div>
+
+
+            <!-- Show ALll button -->
+            <div class="my-6 text-center hidden" id="show-all-container">
+                <button onclick="showAllHandler()" class="btn bg-[#0D6EFD] text-white rounded-lg">Show All</button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal">
+            <div class="modal-box space-y-5">
+                <h3 id="show-detail-phone-name" class="text-lg font-bold text-center"></h3>
+
+                <div id="show-detail-container" class=" space-y-4 ">
+
+                </div>
+
+                <p class="py-4 text-center">Press ESC key or click outside to close</p>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+            </form>
+        </dialog>
 
     </main>
 
     <footer class="footer bg-[#0D6EFD0D] text-base-content border-base-300 border-b px-10 py-4">
-       <div class=" mx-auto container flex justify-between">
-         <div>
-            <h1 class="font-bold text-5xl">Hot Gadgets</h1>
-            <p class="font-semibold">You can definitely work.</p>
+        <div class=" mx-auto container flex justify-between">
+            <div>
+                <h1 class="font-bold text-5xl">Hot Gadgets</h1>
+                <p class="font-semibold">You can definitely work.</p>
+            </div>
+            <div class="flex justify-center items-center gap-5 m-5">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <button class="btn bg-[#0D6EFD] text-white rounded-lg">Join Premium</button>
+            </div>
         </div>
-        <div class="flex justify-center items-center gap-5 m-5">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <button class="btn bg-[#0D6EFD] text-white rounded-lg">Join Premium</button>
-        </div>
-       </div>
-       
+
 
     </footer>
     <footer class="footer sm:footer-horizontal bg-[#0D6EFD0D] text-base-content p-10 flex-1 justify-evenly">
