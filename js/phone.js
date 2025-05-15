@@ -1,4 +1,4 @@
-const loadPhone = async (searchText = 'iphone', isShowAll) => {
+const loadPhone = async (searchText = '13', isShowAll) => {
 
      
     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
